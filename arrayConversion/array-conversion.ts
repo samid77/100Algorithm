@@ -1,3 +1,3 @@
 const arrayConversion = (a, b) => {
-    return false
+    return true
 }
