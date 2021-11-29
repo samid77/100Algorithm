@@ -1,17 +1,41 @@
 const arrayMaxConsecutiveSum = (inputArray, k) => {
-  let i = 0;
-  let highest = 0;
+  // let i = 0;
+  // let highest = 0;
 
-  while(i < inputArray.length) {
-    if(!isNaN(inputArray[i] + inputArray[i + 1])) {
-      if(inputArray[i] + inputArray[i + 1] > highest) {
-        highest = inputArray[i] + inputArray[i + 1]
-      }
-    }
-    i++;
+  // while(i < inputArray.length) {
+  //   if(!isNaN(inputArray[i] + inputArray[i + 1])) {
+  //     if(inputArray[i] + inputArray[i + 1] > highest) {
+  //       highest = inputArray[i] + inputArray[i + 1]
+  //     }
+  //   }
+  //   i++;
+  // }
+
+  // return highest
+
+  /** Second Solution */
+
+  let sum = 0;
+  let max = 0;
+
+  for(let i = 0; i < k; i++) {
+    sum += inputArray[i]
   }
 
-  return highest
+  max = sum;
+
+  for(let i = k; i < inputArray.length; i++) {
+    sum -= inputArray[i-k]
+    sum += inputArray[i]
+
+
+    if(sum > max) {
+      max = sum
+    }
+  }
+
+  return max;
+
 
 
 }
