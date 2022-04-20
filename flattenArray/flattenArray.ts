@@ -1,4 +1,4 @@
-export function flattenArray(arr: any[]): any[] {
+export const flattenArray = (arr: any[]): any[] =>  {
 
     const tempArr: any[] = [];
 
