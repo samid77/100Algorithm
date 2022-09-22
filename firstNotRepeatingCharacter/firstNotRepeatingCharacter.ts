@@ -15,9 +15,14 @@ export function firstNotRepeatingCharacter(s: string): string {
                 duplicates[e].count++;
                 duplicates[e].idx = idx
             }
+            console.log(JSON.stringify(duplicates, undefined, 2))
+            console.log(`==================`)
         })
 
         for(const key in duplicates) {
+            console.log(`key ${key}: ${JSON.stringify(duplicates[key], undefined, 2)}`)
+            console.log(`idxAnswer: ${idxAnswer}`)
+            console.log(`-----------------------`)
             if(duplicates[key].count === 1 && duplicates[key].idx < idxAnswer) {
                 result = key;
                 idxAnswer = duplicates[key].idx;
@@ -28,5 +33,5 @@ export function firstNotRepeatingCharacter(s: string): string {
         return result;
 }
 
-console.log(firstNotRepeatingCharacter('abacabad'));
-console.log(firstNotRepeatingCharacter('abacabaabacaba'));
+console.log(firstNotRepeatingCharacter('abzacabad'));
+// console.log(firstNotRepeatingCharacter('abacabaabacaba'));

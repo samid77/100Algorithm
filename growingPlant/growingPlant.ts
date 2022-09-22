@@ -4,6 +4,8 @@ export function growingPlant(upSpeed: number, downSpeed: number, desiredHeight: 
     let totalHeight = 0;
 
     while(totalHeight < desiredHeight) {
+        console.log(`totalHeight: ${totalHeight}`)
+        console.log(`=====================`)
         days++;
         totalHeight += upSpeed
 

@@ -1,18 +1,20 @@
 export function circleOfNumbers(n: number, firstNumber: number): number {
 
-  const listNumber = [];
-  const halfWay = n/2;
+  const numberList:number[] = [];
+  const halfWay: number = n/2;
 
-  for(let i = 0; i < n; i++) {
-    listNumber.push(i)
+  for(let i=0; i < n; i++) {
+    numberList.push(i);
   }
 
   if(firstNumber < halfWay) {
-    return listNumber[firstNumber + halfWay]
-  } else {
-    return listNumber[firstNumber - halfWay]
-  }
+    return numberList[firstNumber + halfWay]
+  } 
+  return numberList[firstNumber - halfWay]
 
 }
 
+console.log(circleOfNumbers(10, 4));
+console.log(circleOfNumbers(10, 5));
 console.log(circleOfNumbers(10, 8));
+console.log(circleOfNumbers(10, 6));

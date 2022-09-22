@@ -1,12 +1,10 @@
 export function evenDigitsOnly(n: number): boolean {
 
-    const charNum: string[] = n.toString().split('');
+    const arrNum: string[] = n.toString().split('');
 
-    return charNum.every((char) => 
-        parseInt(char) % 2 === 0
+    return arrNum.every((num) => 
+        parseInt(num) % 2 === 0
     )
-
-
 }
 
 console.log(evenDigitsOnly(248622));

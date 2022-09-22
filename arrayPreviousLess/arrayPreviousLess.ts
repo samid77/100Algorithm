@@ -4,6 +4,8 @@ const arrayPreviousLess = (items: number[]): number[] => {
 
   for(let i=items.length - 1; i >=0; i--) {
     for(let j=i; j>=0; j--) {
+      console.log(`j: ${j}`)
+      console.log(`items[j]: ${items[j]}`)
       if(items[i] > items[j]) {
         finalArr.unshift(items[j])
         break;
@@ -11,6 +13,7 @@ const arrayPreviousLess = (items: number[]): number[] => {
         finalArr.unshift(-1);
       }
     }
+    console.log(`==========`)
   }
 
   return finalArr;

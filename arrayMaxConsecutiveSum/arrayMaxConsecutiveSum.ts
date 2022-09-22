@@ -15,29 +15,24 @@ const arrayMaxConsecutiveSum = (inputArray, k) => {
 
   /** Second Solution */
 
-  let sum = 0;
-  let max = 0;
+  let sum: number = 0;
+  let max: number = 0;
 
-  for(let i = 0; i < k; i++) {
-    sum += inputArray[i]
+  for(let i=0; i < k; i++) { 
+    sum += inputArray[i];
   }
 
   max = sum;
 
-  for(let i = k; i < inputArray.length; i++) {
-    sum -= inputArray[i-k]
-    sum += inputArray[i]
+  for(let i=k; i < inputArray.length; i++) {
+    sum -= inputArray[i-k];
+    sum += inputArray[i];
 
-
-    if(sum > max) {
-      max = sum
-    }
+    if(sum > max) max = sum;
   }
 
   return max;
-
-
-
 }
 
 console.log(arrayMaxConsecutiveSum([2, 3, 5, 1, 6], 2));
+console.log(arrayMaxConsecutiveSum([2, 3, 5, 1, 6, 4], 3));

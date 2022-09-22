@@ -1,5 +1,9 @@
 export function extractEachKth(inputArray: number[], k: number): number[] {
 
+    inputArray.forEach((el, idx) => {
+        console.log((idx + 1)) 
+    })
+    
     return inputArray.filter((el, idx) => (
         (idx + 1) % k !== 0
     ))

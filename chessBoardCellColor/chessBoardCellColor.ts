@@ -14,6 +14,9 @@ export function chessBoardCellColor(cell1: string, cell2: string): boolean {
   const total1 = (board[cell1[0]] + parseInt(cell1[1])) % 2;
   const total2 = (board[cell2[0]] + parseInt(cell2[1])) % 2;
 
+  
+  console.log(board[cell1[0]])
+  console.log(parseInt(cell1[1]))
   console.log(total1)
   console.log(total2)
 
@@ -22,4 +25,4 @@ export function chessBoardCellColor(cell1: string, cell2: string): boolean {
 }
 
 console.log(chessBoardCellColor('A1', 'C3'));
-console.log(chessBoardCellColor('A1', 'H3'));
+// console.log(chessBoardCellColor('A1', 'H3'));

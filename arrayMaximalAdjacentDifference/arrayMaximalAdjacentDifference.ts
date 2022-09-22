@@ -1,14 +1,11 @@
 const arrayMaximalAdjacentDifference = (inputArray: number[]): number => {
   
-  let maxDiff = Math.abs(inputArray[0] - inputArray[1])
+  let maxDiff:number = Math.abs(inputArray[0] - inputArray[1]);
 
-  for(let i = 0; i < inputArray.length; i++) {
-    let absDiff = Math.abs(inputArray[i - 1] - inputArray[i])
-
-    if(absDiff > maxDiff) {
-      maxDiff = absDiff
-    }
-  }
+  for(let i=0; i < inputArray.length; i++) {
+    let absDiff: number = Math.abs(inputArray[i-1] - inputArray[i]);
+    if(absDiff > maxDiff) maxDiff = absDiff;
+  } 
 
   return maxDiff;
 

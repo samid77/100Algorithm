@@ -1,24 +1,25 @@
 export function composeRanges(nums: number[]): string[] {
 
-    if(nums.length < 1) {
-        return []
-    }
+    if(nums.length < 1) return []
 
-    const ranges: any[] = [{starts: nums[0], ends: nums[0]}]
+    const ranges: any[] = [{start: nums[0], end: nums[0]}]
 
-    for(let i=0; i < nums.length; i++) {
+    for(let i=1; i < nums.length; i++) {
         if(ranges[ranges.length - 1].end + 1 === nums[i]) {
             ranges[ranges.length - 1].end = nums[i]
         } else {
-            ranges.push({starts: nums[i], ends: nums[i]});
+            ranges.push({start: nums[i], end: nums[i]});
         }
     }
 
+    console.log(ranges)
+
+
     for(let j=0; j < ranges.length; j++) {
-        if(ranges[j].starts !== ranges[j].ends) {
-            ranges[j] = `${ranges[j].starts}->${ranges[j].ends}`
+        if(ranges[j].start !== ranges[j].end) {
+            ranges[j] = `${ranges[j].start}->${ranges[j].end}`
         } else {
-            ranges[j] = ranges[j].starts.toString();
+            ranges[j] = ranges[j].start.toString();
         }
     }
 

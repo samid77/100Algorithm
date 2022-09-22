@@ -1,16 +1,18 @@
 export function differentSymbolsNaive(s: string): number {
 
-    // const uniqueChars: string[] = [];
-    // const inputChars: string[] = s.split('');
+    const uniqueChars: string[] = [];
+    const inputChars: string[] = s.split('');
 
-    // inputChars.forEach(char => {
-    //     if(!uniqueChars.includes(char)) {
-    //         uniqueChars.push(char);
-    //     }
-    // });
+    inputChars.forEach(char => {
+        console.log(char)
+        if(!uniqueChars.includes(char)) {
+            console.log(char)
+            uniqueChars.push(char);
+        }
+    });
     
 
-    // return uniqueChars.length;
+    return uniqueChars.length;
 
     // const uniqueChars = {}
     // const inputChars = s.split('');
@@ -22,14 +24,14 @@ export function differentSymbolsNaive(s: string): number {
 
     // return Object.keys(uniqueChars).length
 
-    const uniqueChars = new Set();
-    const inputChars = s.split('');
+    // const uniqueChars = new Set();
+    // const inputChars = s.split('');
 
-    inputChars.forEach(char => {
-        uniqueChars.add(char)
-    })
+    // inputChars.forEach(char => {
+    //     uniqueChars.add(char)
+    // })
 
-    return uniqueChars.size;
+    // return uniqueChars.size;
 
 }
 

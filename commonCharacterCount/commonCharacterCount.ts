@@ -9,10 +9,14 @@ export function commonCharacterCount(s1: string, s2: string): number {
   countedS1 = getCharList(splittedS1);
   countedS2 = getCharList(splittedS2);
 
+  console.log(countedS1)
+  console.log(countedS2)
+
   for(const prop in countedS1) {
+    console.log(prop)
     if(countedS2.hasOwnProperty(prop)) {
-      // console.log(`prop: ${prop}`)
-      // console.log(countedS2[prop])
+      console.log(countedS2[prop])
+      console.log(countedS1[prop])
       if(countedS2[prop] < countedS1[prop]) {
         counter += countedS2[prop]
       } else {
@@ -34,7 +38,6 @@ export function commonCharacterCount(s1: string, s2: string): number {
 }
 
 function getCharList (chars: string[]): object {
-  // const wordCount = {};
   const wordCount: { [key: string]: any } = {}
 
   for (let i = 0; i < chars.length; i++) {
@@ -52,3 +55,4 @@ function getCharList (chars: string[]): object {
 }
 
 console.log(commonCharacterCount('aabcc', 'adcaa'));
+// console.log(commonCharacterCount('abbcc', 'adbbcaa'));
