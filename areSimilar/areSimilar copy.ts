@@ -5,25 +5,24 @@ export function areSimilar(a: number[], b: number[]): boolean {
     if(a.toString() === b.toString()) return true;
 
     for(let i=0; i < a.length; i++) {
-        console.log(a[i])
         if(a[i] !== b[i]) {
             poolA.push(a[i]);
             poolB.push(b[i]);
         }
     }
 
-    console.log(poolB)
-    console.log(poolB.reverse())
-    poolB = poolB.reverse();
     console.log(poolA)
+    console.log(poolB)
 
-    if(poolA.length === 2 && poolA.toString() === poolB.toString()) return true;
+    poolB = poolB.reverse();
+
+    if(poolA.length === 2 && (poolA.toString() === poolB.toString())) return true;
 
     return false;
 
 
 }
 
-// console.log(areSimilar([1, 2, 3], [1, 2, 3]));
-// console.log(areSimilar([1, 2, 3], [2, 1, 3]));
+console.log(areSimilar([1, 2, 3], [1, 2, 3]));
+console.log(areSimilar([1, 2, 3], [2, 1, 3]));
 console.log(areSimilar([1, 2, 2], [2, 1, 1]));

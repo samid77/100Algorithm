@@ -1,13 +1,15 @@
 export function adjacentElementsProduct(inputArray: number[]): number {
 
-    let largestSum:number = inputArray[0] * inputArray[1];
-    for(let i=1; i < inputArray.length; i++){
-        const currLargest:number = inputArray[i] * inputArray[i + 1];
-        largestSum < currLargest ? largestSum = currLargest : largestSum
-    }
+   let largestProduct:number = inputArray[0] * inputArray[1];
 
-    return largestSum;
+   for(let i=0; i < inputArray.length - 1; i++) {
+    const currMultiple: number = inputArray[i] * inputArray[i + 1];
+    largestProduct = largestProduct < currMultiple ? currMultiple : largestProduct;
+
+   }
+
+   return largestProduct;
 }
 
 console.log(adjacentElementsProduct([3, 6, -2, -5, 7, 3]));
-console.log(adjacentElementsProduct([2, 4, 1, 2, 3, 2]));
+console.log(adjacentElementsProduct([2, 4, 1, 2, 6, 3, 2]));

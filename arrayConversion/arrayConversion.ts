@@ -29,6 +29,7 @@ const arrayConversion = (inputArray: number[]): number => {
   let isOdd = true;
 
   while(inputArray.length !== 1) {
+    console.log(inputArray)
     inputArray = createNewArr(inputArray, isOdd);
     isOdd = !isOdd;
   }
@@ -43,6 +44,7 @@ const createNewArr = (arr:number[], oddState: boolean): number[] => {
 
   if(oddState) {
     for(let i=0; i < arr.length; i+=2) {
+      console.log(arr);
       newArr.push(arr[i] + arr[i + 1]);
     }
   } else {
