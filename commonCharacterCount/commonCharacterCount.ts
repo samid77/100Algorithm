@@ -9,14 +9,8 @@ export function commonCharacterCount(s1: string, s2: string): number {
   countedS1 = getCharList(splittedS1);
   countedS2 = getCharList(splittedS2);
 
-  console.log(countedS1)
-  console.log(countedS2)
-
   for(const prop in countedS1) {
-    console.log(prop)
     if(countedS2.hasOwnProperty(prop)) {
-      console.log(countedS2[prop])
-      console.log(countedS1[prop])
       if(countedS2[prop] < countedS1[prop]) {
         counter += countedS2[prop]
       } else {
